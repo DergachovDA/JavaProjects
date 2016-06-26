@@ -24,7 +24,13 @@ public class Money {
         return this.money;
     }
 
+    public void addMoney(Currency... args) {
+        for (int i = 0; i < args.length; i++) {
+            this.money.put(args[i], 1);
+        }
+    }
+
     public void addMoney(Money money) {
-        this.money.putAll(money.getMoney());
+            this.money.putAll(money.getMoney());
     }
 }
