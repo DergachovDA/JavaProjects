@@ -7,10 +7,10 @@ public class Account {
     private long lastNumber = 516800000000000L;
 
     public Account(Person person, Money money) {
-        this.person = person;
         this.card = createCard(person, this);
         this.amount.addMoney(money);
-        this.person.setCard(this.card);
+        person.setCard(this.card);
+        this.person = person;
     }
 
     private Card createCard(Person person, Account acct) {

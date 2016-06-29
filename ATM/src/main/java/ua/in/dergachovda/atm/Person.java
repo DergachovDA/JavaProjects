@@ -17,8 +17,11 @@ public class Person {
         return card;
     }
 
-    public void setCard(Card card) {
+    public boolean setCard(Card card) {
+        if (card != null)
+            return false;
         this.card = card;
+        return true;
     }
 
     public Money getAllCash() {
