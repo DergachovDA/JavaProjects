@@ -3,15 +3,24 @@ package ua.in.dergachovda.atm;
 import java.util.Date;
 
 public class Card {
+
+    private static final int VALIDITY = 3;
+
     private Person person;
     private Account acct;
-    private long number;
-    private Date expiresEnd;
+    private CardsNo cardsNo;
+    private ExpiresEnd expiresEnd;
 
-    public Card(Person person, Account acct, long number, int years) {
+
+    public Card(Person person, Account acct, int number) {
         this.person = person;
         this.acct = acct;
-        this.number = number;
-        this.expiresEnd.setTime(new Date().getTime() + 31536000000L * years);
+        this.cardsNo = new CardsNo(number);
+        Date date = new Date();
+        this.expiresEnd = new ExpiresEnd(date.getMonth(), date.getYear() + VALIDITY);
+    }
+
+    public ExpiresEnd getExpiresEnd() {
+        return expiresEnd;
     }
 }
