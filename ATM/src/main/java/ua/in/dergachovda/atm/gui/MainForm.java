@@ -8,7 +8,7 @@ import java.util.List;
 public class MainForm extends JFrame {
 
     private JLabel label;
-
+    private JTextArea textArea;
     private Person curentPerson;
     private ATM atm;
 
@@ -16,7 +16,7 @@ public class MainForm extends JFrame {
         super("ATM");
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(350, 500);
+        setSize(500, 500);
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
@@ -26,16 +26,24 @@ public class MainForm extends JFrame {
 
         label = new JLabel("ATM - " + atm.getBank().getName());
         Dimension lableSize = label.getPreferredSize();
-        lableSize.width = 300;
+        lableSize.width = 500;
         lableSize.height = 25;
         label.setPreferredSize(lableSize);
 
-        GridForm gridForm = new GridForm(atm, curentPerson);
+        textArea = new JTextArea();
+        Dimension textAriaSize = textArea.getPreferredSize();
+        textAriaSize.width = 100;
+        textAriaSize.height = 100;
+        textArea.setPreferredSize(textAriaSize);
 
-        Toolbar toolbar = new Toolbar(atm, persons);
+        LeftButtonPanel LBPanel = new LeftButtonPanel();
+        RightButtonPanel RBPanel = new RightButtonPanel();
+        Toolbar toolbar = new Toolbar(atm, persons, textArea);
 
         add(label, BorderLayout.NORTH);
-        add(gridForm, BorderLayout.CENTER);
+        add(LBPanel, BorderLayout.WEST);
+        add(textArea, BorderLayout.CENTER);
+        add(RBPanel, BorderLayout.EAST);
         add(toolbar, BorderLayout.SOUTH);
     }
 

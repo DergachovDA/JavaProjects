@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Toolbar extends JPanel {
 
-    public Toolbar(ATM atm, List<Person> persons) {
+    public Toolbar(ATM atm, List<Person> persons, JTextArea textArea) {
 
         JButton buttonOk = new JButton("Ok");
         JButton buttonCancel = new JButton("Cansel");
@@ -25,13 +25,18 @@ public class Toolbar extends JPanel {
         buttonSelectCard.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                SwingUtilities.invokeLater(new Runnable() {
-                    @Override
-                    public void run() {
-                        new SelectCard();
-                    }
-                });
+                atm.setCard(persons.get(0).getCard());
+                textArea.setText(atm.getCurrentCard().toString());
             }
         });
     }
+
+//    public static Card selectCard() {
+//        SwingUtilities.invokeLater(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        new SelectCard();
+//                    }
+//                });
+//    }
 }

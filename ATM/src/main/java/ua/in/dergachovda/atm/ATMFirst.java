@@ -4,6 +4,7 @@ public class ATMFirst implements ATM{
 
     private Money amountOfMoney;
     private Bank bank;
+    private Card currentCard;
 
     public ATMFirst(Bank bank) {
         this.bank = bank;
@@ -19,6 +20,17 @@ public class ATMFirst implements ATM{
 
     public boolean readCard(Card card) {
         return false;
+    }
+
+    @Override
+    public Card getCurrentCard() {
+        return currentCard;
+    }
+
+    @Override
+    public boolean setCard(Card card) {
+        currentCard = card;
+        return true;
     }
 
     @Override

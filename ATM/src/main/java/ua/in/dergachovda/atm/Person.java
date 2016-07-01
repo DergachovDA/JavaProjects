@@ -18,7 +18,7 @@ public class Person {
     }
 
     public boolean setCard(Card card) {
-        if (card != null)
+        if (this.card != null)
             return false;
         this.card = card;
         return true;
@@ -30,5 +30,10 @@ public class Person {
 
     public void addCash(Money cash) {
         this.cash = cash;
+    }
+
+    @Override
+    public String toString() {
+        return firstname + " " + lastname;
     }
 }

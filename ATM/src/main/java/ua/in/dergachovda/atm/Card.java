@@ -23,4 +23,10 @@ public class Card {
     public ExpiresEnd getExpiresEnd() {
         return expiresEnd;
     }
+
+    @Override
+    public String toString() {
+        return "Person: " + person + "\n"
+                + "No: " + cardsNo;
+    }
 }
