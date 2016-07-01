@@ -14,16 +14,15 @@ public class ATMFirst implements ATM{
     }
 
     public void addMoney(Money money) {
-        this.amountOfMoney.addMoney(money);
-    }
-
-    public void addMoney(Currency... args) {
-        for (int i = 0; i < args.length; i++) {
-            this.amountOfMoney.addMoney(args[i]);
-        }
+        amountOfMoney = new Money(money.getValue());
     }
 
     public boolean readCard(Card card) {
         return false;
+    }
+
+    @Override
+    public Bank getBank() {
+        return bank;
     }
 }
