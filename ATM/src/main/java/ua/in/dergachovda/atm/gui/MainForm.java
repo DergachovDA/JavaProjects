@@ -16,7 +16,7 @@ public class MainForm extends JFrame {
         super("ATM");
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(300, 425);
+        setSize(350, 500);
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);

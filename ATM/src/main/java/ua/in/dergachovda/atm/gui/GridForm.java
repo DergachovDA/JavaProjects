@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class GridForm extends JPanel {
+
     public GridForm(ATM atm, Person person) {
 
         Dimension size = new Dimension();
@@ -19,7 +20,7 @@ public class GridForm extends JPanel {
         Dimension lableSize = label.getPreferredSize();
         lableSize.width = 100;
         lableSize.height = 300;
-        label.setPreferredSize(lableSize);
+        label.setMaximumSize(lableSize);
         gc.gridx = 2;
         gc.gridy = 2;
         add(label, gc);
