@@ -28,7 +28,15 @@ public class ATMFirst implements ATM{
     }
 
     @Override
+    public boolean isValidCard(Card card) {
+        return false;
+    }
+
+    @Override
     public boolean setCard(Card card) {
+        if (currentCard != null) {
+            return false;
+        }
         currentCard = card;
         return true;
     }

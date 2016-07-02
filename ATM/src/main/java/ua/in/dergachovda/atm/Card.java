@@ -24,6 +24,22 @@ public class Card {
         return expiresEnd;
     }
 
+    public Person getPerson() {
+        return person;
+    }
+
+    public Account getAccount() {
+        return acct;
+    }
+
+    public CardsNo getCardsNo() {
+        return cardsNo;
+    }
+
+    public boolean isValid() {
+        return false;
+    }
+
     @Override
     public String toString() {
         return "Person: " + person + "\n"

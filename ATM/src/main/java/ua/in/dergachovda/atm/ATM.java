@@ -5,6 +5,7 @@ public interface ATM {
     public void addMoney(Money money);
     public boolean readCard(Card card);
     public boolean setCard(Card card);
+    public boolean isValidCard(Card card);
     public Card getCurrentCard();
     public Bank getBank();
 }
