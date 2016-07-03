@@ -1,4 +1,4 @@
-package ua.in.dergachovda.atm;
+package ua.in.dergachovda.money;
 
 public interface Currency {
     public int getValue();

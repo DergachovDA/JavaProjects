@@ -1,6 +1,11 @@
-package ua.in.dergachovda.atm;
+package ua.in.dergachovda.bank.first;
 
-public class ATMFirst implements ATM{
+import ua.in.dergachovda.bank.ATM;
+import ua.in.dergachovda.cards.Card;
+import ua.in.dergachovda.bank.Bank;
+import ua.in.dergachovda.money.Money;
+
+public class ATMFirst implements ATM {
 
     private Money amountOfMoney;
     private Bank bank;
@@ -28,8 +33,8 @@ public class ATMFirst implements ATM{
     }
 
     @Override
-    public boolean isValidCard(Card card) {
-        return false;
+    public boolean isValidCard(String pin) {
+        return true;
     }
 
     @Override

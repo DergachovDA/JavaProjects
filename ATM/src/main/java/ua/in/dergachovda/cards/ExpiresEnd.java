@@ -1,4 +1,4 @@
-package ua.in.dergachovda.atm;
+package ua.in.dergachovda.cards;
 
 public class ExpiresEnd {
     private int month;

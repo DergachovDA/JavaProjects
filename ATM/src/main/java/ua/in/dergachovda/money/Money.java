@@ -1,9 +1,9 @@
-package ua.in.dergachovda.atm;
+package ua.in.dergachovda.money;
 
 public class Money {
     private int value;
 
-    Money(int value) {
+    public Money(int value) {
         this.value = value;
     }
 

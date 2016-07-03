@@ -1,4 +1,7 @@
-package ua.in.dergachovda.atm;
+package ua.in.dergachovda;
+
+import ua.in.dergachovda.cards.Card;
+import ua.in.dergachovda.money.Money;
 
 public class Person {
     private String firstname;

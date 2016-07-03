@@ -1,6 +1,8 @@
-package ua.in.dergachovda.atm.gui;
+package ua.in.dergachovda.gui;
 
-import ua.in.dergachovda.atm.*;
+import ua.in.dergachovda.Person;
+import ua.in.dergachovda.bank.ATM;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -31,7 +33,7 @@ public class Toolbar extends JPanel {
         });
     }
 
-//    public static Card selectCard() {
+//    public static CardFirst selectCard() {
 //        SwingUtilities.invokeLater(new Runnable() {
 //                    @Override
 //                    public void run() {

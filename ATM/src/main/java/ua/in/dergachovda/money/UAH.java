@@ -1,4 +1,4 @@
-package ua.in.dergachovda.atm;
+package ua.in.dergachovda.money;
 
 public enum UAH implements Currency{
     ONE(1),
@@ -13,7 +13,7 @@ public enum UAH implements Currency{
 
     private int value;
 
-    UAH(int value) {
+    private UAH(int value) {
         this.value = value;
     }
 

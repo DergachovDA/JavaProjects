@@ -1,6 +1,11 @@
-package ua.in.dergachovda.atm;
+package ua.in.dergachovda;
 
-import ua.in.dergachovda.atm.gui.MainForm;
+import ua.in.dergachovda.bank.ATM;
+import ua.in.dergachovda.bank.first.ATMFirst;
+import ua.in.dergachovda.gui.MainForm;
+import ua.in.dergachovda.bank.Bank;
+import ua.in.dergachovda.bank.first.BankFirst;
+import ua.in.dergachovda.money.Money;
 
 import javax.swing.*;
 import java.util.LinkedList;

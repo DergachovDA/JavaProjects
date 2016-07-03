@@ -1,4 +1,4 @@
-package ua.in.dergachovda.atm.gui;
+package ua.in.dergachovda.gui;
 
 import javax.swing.*;
 

@@ -1,18 +1,23 @@
-package ua.in.dergachovda.atm;
+package ua.in.dergachovda.bank.first;
+
+import ua.in.dergachovda.Person;
+import ua.in.dergachovda.bank.Account;
+import ua.in.dergachovda.cards.CardsNo;
+import ua.in.dergachovda.cards.ExpiresEnd;
 
 import java.util.Date;
 
-public class Card {
+public class CardFirst implements ua.in.dergachovda.cards.Card {
 
     private static final int VALIDITY = 3;
 
     private Person person;
-    private Account acct;
+    private AccountFirst acct;
     private CardsNo cardsNo;
     private ExpiresEnd expiresEnd;
 
 
-    public Card(Person person, Account acct, int number) {
+    public CardFirst(Person person, AccountFirst acct, int number) {
         this.person = person;
         this.acct = acct;
         this.cardsNo = new CardsNo(number);
@@ -29,7 +34,7 @@ public class Card {
     }
 
     public Account getAccount() {
-        return acct;
+        return (Account) acct;
     }
 
     public CardsNo getCardsNo() {
