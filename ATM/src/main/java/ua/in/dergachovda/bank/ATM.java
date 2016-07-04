@@ -8,7 +8,8 @@ public interface ATM {
     public Money getMoney();
     public void addMoney(Money money);
     public boolean readCard(Card card);
-    public boolean isValidCard(String pin);
+    public boolean isValidCard();
+    public boolean verificationCard(String pin);
     public boolean setCard(Card card);
     public Card getCurrentCard();
     public Bank getBank();

@@ -29,6 +29,7 @@ public class Toolbar extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 atm.setCard(persons.get(0).getCard());
                 textArea.setText(atm.getCurrentCard().toString());
+                new PinForm(atm, textArea);
             }
         });
     }

@@ -3,7 +3,10 @@ package ua.in.dergachovda.bank.first;
 import ua.in.dergachovda.bank.ATM;
 import ua.in.dergachovda.cards.Card;
 import ua.in.dergachovda.bank.Bank;
+import ua.in.dergachovda.cards.ExpiresEnd;
 import ua.in.dergachovda.money.Money;
+
+import java.util.Date;
 
 public class ATMFirst implements ATM {
 
@@ -33,8 +36,12 @@ public class ATMFirst implements ATM {
     }
 
     @Override
-    public boolean isValidCard(String pin) {
-        return true;
+    public boolean isValidCard() {
+        return currentCard.isValid(new Date());
+    }
+
+    public boolean verificationCard(String pin) {
+        return bank.verificationCard(currentCard, pin);
     }
 
     @Override

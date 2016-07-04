@@ -24,24 +24,31 @@ public class CardFirst implements ua.in.dergachovda.cards.Card {
         Date date = new Date();
         this.expiresEnd = new ExpiresEnd(date.getMonth(), date.getYear() + VALIDITY);
     }
-
+    @Override
     public ExpiresEnd getExpiresEnd() {
         return expiresEnd;
     }
-
+    @Override
     public Person getPerson() {
         return person;
     }
-
+    @Override
     public Account getAccount() {
         return (Account) acct;
     }
-
+    @Override
     public CardsNo getCardsNo() {
         return cardsNo;
     }
-
-    public boolean isValid() {
+    @Override
+    public boolean isValid(Date date) {
+        if (date.getYear() < this.getExpiresEnd().getYear()) {
+            return true;
+        } else {
+            if (date.getYear() == this.getExpiresEnd().getYear()) {
+                return date.getMonth() <= this.getExpiresEnd().getMonth();
+            }
+        }
         return false;
     }
 
