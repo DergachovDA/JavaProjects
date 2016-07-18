@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class LeftPanel extends JPanel {
-    public LeftPanel() {
+    public LeftPanel(JLabel labelInput, JLabel labelOutput) {
         setSize(180, 220);
         Dimension size = new Dimension();
         size.width = 220;
@@ -14,14 +14,12 @@ public class LeftPanel extends JPanel {
         setLayout(layoutManager);
         GridBagConstraints gc = new GridBagConstraints();
 
-        JLabel labelOutput = new JLabel();
         labelOutput.setPreferredSize(size);
         gc.gridx = 1;
         gc.gridy = 1;
         labelOutput.setText("Insert the Card");
         add(labelOutput, gc);
 
-        JLabel labelInput = new JLabel();
         labelInput.setPreferredSize(size);
         gc.gridx = 1;
         gc.gridy = 2;

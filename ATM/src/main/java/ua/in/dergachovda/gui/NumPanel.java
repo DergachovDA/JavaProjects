@@ -2,10 +2,15 @@ package ua.in.dergachovda.gui;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class NumPanel extends JPanel {
-    public NumPanel() {
 
+    String input;
+
+    public NumPanel(JLabel labelInput, JLabel labelOutput) {
+        input = "";
         setSize(180, 220);
         Dimension size = new Dimension();
         size.width = 55;
@@ -100,5 +105,103 @@ public class NumPanel extends JPanel {
         buttonC.setText("C");
         buttonC.setForeground(Color.RED);
         add(buttonC, gc);
+
+
+        button0.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input += button0.getText();
+                labelInput.setText(input);
+            }
+        });
+
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input += button1.getText();
+                labelInput.setText(input);
+            }
+        });
+
+        button2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input += button2.getText();
+                labelInput.setText(input);
+            }
+        });
+
+        button3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input += button3.getText();
+                labelInput.setText(input);
+            }
+        });
+
+        button4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input += button4.getText();
+                labelInput.setText(input);
+            }
+        });
+
+        button5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input += button5.getText();
+                labelInput.setText(input);
+            }
+        });
+
+        button6.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input += button6.getText();
+                labelInput.setText(input);
+            }
+        });
+
+        button7.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input += button7.getText();
+                labelInput.setText(input);
+            }
+        });
+
+        button8.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input += button8.getText();
+                labelInput.setText(input);
+            }
+        });
+
+        button9.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input += button9.getText();
+                labelInput.setText(input);
+            }
+        });
+
+        buttonC.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                input = "";
+                labelInput.setText(input);
+            }
+        });
+
+        buttonOK.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                labelOutput.setText(input);
+                input = "";
+                labelInput.setText(input);
+            }
+        });
     }
 }
