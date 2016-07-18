@@ -19,14 +19,14 @@ public class MainForm extends JFrame {
         super("ATM - " + atm.getBank().getName());
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(300, 400);
+        setSize(400, 250);
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
 
         LayoutManager layoutManager = new BorderLayout(5, 5);
         setLayout(layoutManager);
-
+/*
 //        label = new JLabel("ATM - " + atm.getBank().getName());
 //        Dimension lableSize = label.getPreferredSize();
 //        lableSize.width = 500;
@@ -52,6 +52,12 @@ public class MainForm extends JFrame {
         add(textArea, BorderLayout.CENTER);
 //        add(RBPanel, BorderLayout.EAST);
         add(toolbar, BorderLayout.SOUTH);
+*/
+        LeftPanel lPanel = new LeftPanel();
+        NumPanel numPanel = new NumPanel();
+
+        add(lPanel, BorderLayout.WEST);
+        add(numPanel, BorderLayout.EAST);
     }
 
 
