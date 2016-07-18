@@ -45,7 +45,7 @@ public class LeftPanel extends JPanel {
         buttonGetCash.setPreferredSize(size);
         gc.gridx = 1;
         gc.gridy = 4;
-        buttonGetCash.setText("Get Cash");
+        buttonGetCash.setText("---");
         add(buttonGetCash, gc);
     }
 }

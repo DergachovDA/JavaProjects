@@ -105,8 +105,7 @@ public class NumPanel extends JPanel {
         buttonC.setText("C");
         buttonC.setForeground(Color.RED);
         add(buttonC, gc);
-
-
+        
         button0.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
